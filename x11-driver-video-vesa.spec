@@ -1,3 +1,5 @@
+%define debug_package	%{nil}
+
 Name: x11-driver-video-vesa
 Version: 1.3.0
 Release: %mkrel 5
@@ -25,10 +27,12 @@ Patch9: 0009-Bug-11090-xf86-video-vesa-COPYING-file.patch
 Patch10:0010-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 Patch11:0011-Fix-oversight-not-adding-macro-to-check-for-conditio.patch
 ########################################################################
-BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.0.1
-BuildRequires: x11-util-macros >= 1.1.5-4mdk
-BuildRequires: x11-util-modular
+BuildRequires: x11-util-macros		>= 1.1.5-4mdk
+#BuildRequires: gcc			>= 4.2.2
+#BuildRequires: glibc-devel		>= 2.7
+BuildRequires: libpixman-1-devel	>= 0.9.6
+BuildRequires: x11-proto-devel		>= 7.3
+BuildRequires: x11-server-devel		>= 1.4
 Conflicts: xorg-x11-server < 7.0
 
 %description
