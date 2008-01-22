@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-video-vesa
 Version: 1.3.0
-Release: %mkrel 5
+Release: %mkrel 6
 Summary: The X.org driver for Generic VESA Cards
 Group: System/X11
 URL: http://xorg.freedesktop.org
