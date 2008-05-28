@@ -1,7 +1,7 @@
 Name: x11-driver-video-vesa
 Version: 1.3.0
 Release: %mkrel 7
-Summary: The X.org driver for Generic VESA Cards
+Summary: X.org driver for Generic VESA Cards
 Group: System/X11
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
