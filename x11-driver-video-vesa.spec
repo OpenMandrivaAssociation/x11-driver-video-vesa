@@ -17,7 +17,7 @@ Patch2: 0002-Bug-11090-xf86-video-vesa-COPYING-file.patch
 Patch3: 0003-Remove-all-trace-of-mfb.patch
 
 %description
-The X.org driver for Generic VESA Cards
+The X.org driver for Generic VESA Cards.
 
 %prep
 %setup -q -n xf86-video-vesa-%{version}
