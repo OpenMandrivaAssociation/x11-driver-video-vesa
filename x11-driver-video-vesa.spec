@@ -1,3 +1,6 @@
+# Need to access symbols from the X Server and other dlopen'ed modules
+%define _disable_ld_no_undefined 1
+
 Name: x11-driver-video-vesa
 Version: 1.99.1
 Release: %mkrel 2
