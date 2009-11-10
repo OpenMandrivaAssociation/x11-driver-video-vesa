@@ -3,7 +3,7 @@
 
 Name: x11-driver-video-vesa
 Version: 2.2.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X.org driver for Generic VESA Cards
 Group: System/X11
 URL: http://xorg.freedesktop.org
