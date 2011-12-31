@@ -3,13 +3,12 @@
 
 Name: x11-driver-video-vesa
 Version: 2.3.0
-Release: %mkrel 8
+Release: 9
 Summary: X.org driver for Generic VESA Cards
 Group: System/X11
+License: MIT
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
-License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
@@ -24,7 +23,7 @@ Obsoletes: x11-driver-video-vermilion
 x11-driver-video-vesa is the X.org driver for Generic VESA Cards.
 
 %prep
-%setup -q -n xf86-video-vesa-%{version}
+%setup -qn xf86-video-vesa-%{version}
 
 %build
 %configure2_5x
@@ -33,12 +32,9 @@ x11-driver-video-vesa is the X.org driver for Generic VESA Cards.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
+find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
 %files
-%defattr(-,root,root)
-%{_libdir}/xorg/modules/drivers/vesa_drv.la
 %{_libdir}/xorg/modules/drivers/vesa_drv.so
 %{_mandir}/man4/vesa.4*
+
