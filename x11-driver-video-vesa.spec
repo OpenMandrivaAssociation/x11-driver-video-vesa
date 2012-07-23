@@ -2,8 +2,8 @@
 %define _disable_ld_no_undefined 1
 
 Name: x11-driver-video-vesa
-Version: 2.3.1
-Release: 2
+Version: 2.3.2
+Release: 1
 Summary: X.org driver for Generic VESA Cards
 Group: System/X11
 License: MIT
