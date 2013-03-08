@@ -9,7 +9,7 @@ Group:		System/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
-
+Patch0:		0002-Remove-mibstore.h.patch
 BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.12
 BuildRequires:	x11-util-macros >= 1.0.1
@@ -24,6 +24,7 @@ x11-driver-video-vesa is the X.org driver for Generic VESA Cards.
 
 %prep
 %setup -qn xf86-video-vesa-%{version}
+%apply_patches
 
 %build
 %configure2_5x
