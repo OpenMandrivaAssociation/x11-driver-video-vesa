@@ -2,14 +2,13 @@
 %define _disable_ld_no_undefined 1
 
 Name:		x11-driver-video-vesa
-Version:	2.3.2
-Release:	3
+Version:	2.3.3
+Release:	1
 Summary:	X.org driver for Generic VESA Cards
 Group:		System/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
-Patch0:		0002-Remove-mibstore.h.patch
 BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.12
 BuildRequires:	x11-util-macros >= 1.0.1
