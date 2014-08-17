@@ -3,7 +3,7 @@
 
 Name:		x11-driver-video-vesa
 Version:	2.3.3
-Release:	8
+Release:	9
 Summary:	X.org driver for Generic VESA Cards
 Group:		System/X11
 License:	MIT
@@ -26,12 +26,12 @@ x11-driver-video-vesa is the X.org driver for Generic VESA Cards.
 %apply_patches
 
 %build
-%configure2_5x
+export CC=gcc
+%configure
 %make
 
 %install
 %makeinstall_std
-find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
 %files
 %{_libdir}/xorg/modules/drivers/vesa_drv.so
