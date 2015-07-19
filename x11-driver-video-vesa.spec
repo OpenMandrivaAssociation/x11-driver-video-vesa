@@ -3,7 +3,7 @@
 
 Name:		x11-driver-video-vesa
 Version:	2.3.4
-Release:	1
+Release:	2
 Summary:	X.org driver for Generic VESA Cards
 Group:		System/X11
 License:	MIT
