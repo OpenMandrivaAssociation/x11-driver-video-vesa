@@ -3,12 +3,14 @@
 
 Name:		x11-driver-video-vesa
 Version:	2.4.0
-Release:	3
+Release:	4
 Summary:	X.org driver for Generic VESA Cards
 Group:		System/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-vesa-%{version}.tar.bz2
+Patch1:		0001-Disable-shadow-by-default-on-known-virtual-GPUs.patch
+Patch2:		0001-Refuse-to-run-on-UEFI-machines.patch
 BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.18
 BuildRequires:	x11-util-macros >= 1.0.1
@@ -22,15 +24,14 @@ Obsoletes:	x11-driver-video-vermilion
 x11-driver-video-vesa is the X.org driver for Generic VESA Cards.
 
 %prep
-%setup -qn xf86-video-vesa-%{version}
-%apply_patches
+%autosetup -n xf86-video-vesa-%{version} -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_libdir}/xorg/modules/drivers/vesa_drv.so
