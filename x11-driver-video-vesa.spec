@@ -35,5 +35,5 @@ autoreconf -fi
 %make_install
 
 %files
-%{_libdir}/xorg/modules/drivers/vesa_drv.so
+%{_libdir}/xorg/modules/xlibre-*.*/drivers/vesa_drv.so
 %{_mandir}/man4/vesa.4*
